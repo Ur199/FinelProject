@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: blue-deployment
+  name: flask-deployment
 spec:
   replicas: 4
   selector:
@@ -9,12 +9,12 @@ spec:
       deploy: blue
   template: 
     metadata:
-      name: blue-pod
+      name: flask-pod
       labels:
-        deploy: blue
+        deploy: flask
     spec:
       containers:
-        - name: blue-container
-          image: oriyossef/blue
+        - name: flask-container
+          image: oriyossef/flaskapp
           ports:
             - containerPort: 5005
