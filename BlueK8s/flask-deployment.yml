@@ -6,7 +6,7 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      deploy: blue
+      deploy: flask
   template: 
     metadata:
       name: flask-pod
